@@ -23,7 +23,7 @@ for iter = 1:num_iters
     sum_theta_1 = 0;
     sum_theta_2 = 0;
     for i = 1:m
-      h = theta_1 + theta_2 * X(i,1);
+      h = theta_1 + theta_2 * X(i,2);
       sum_theta_1 = sum_theta_1 + h - y(i);
       sum_theta_2 = sum_theta_2 + (h - y(i)) * X(i,2);
     endfor
