@@ -1,19 +1,19 @@
-%% Machine Learning Online Class - Exercise 1: Linear Regression
+	%% Machine Learning Online Class - Exercise 1: Linear Regression
 
-%  Instructions
-%  ------------
-% 
-%  This file contains code that helps you get started on the
-%  linear exercise. You will need to complete the following functions 
-%  in this exericse:
-%
-%     warmUpExercise.m
-%     plotData.m
-%     gradientDescent.m
-%     computeCost.m
-%     gradientDescentMulti.m
-%     computeCostMulti.m
-%     featureNormalize.m
+	%  Instructions
+	%  ------------
+	% 
+	%  This file contains code that helps you get started on the
+	%  linear exercise. You will need to complete the following functions 
+	%  in this exericse:
+	%
+	%     warmUpExercise.m
+	%     plotData.m
+	%     gradientDescent.m
+	%     computeCost.m
+	%     gradientDescentMulti.m
+	%     computeCostMulti.m
+	%     featureNormalize.m
 %     normalEqn.m
 %
 %  For this exercise, you will not need to change any code in this file,
@@ -60,7 +60,7 @@ iterations = 1500;
 alpha = 0.01;
 
 % compute and display initial cost
-computeCost(X, y, theta)
+computeCost(X, y, theta);
 
 % run gradient descent
 theta = gradientDescent(X, y, theta, alpha, iterations);
