@@ -22,7 +22,7 @@ term_1 = (-y)' * log(h);
 term_2 = (1 - y)' * log(1 - h);
 term_3 = term_1 - term_2;
 term_4 = lambda / (2 * m) .* sum(theta.^2);
-J = (1 / m) * sum(term_3) + term_4;
+J = (1 / m) .* sum(term_3) + term_4;
 
 term_5 = X'(1, :) * h - X'(1, :) * y;
 grad(1) = (1 / m) .* sum(term_5);
