@@ -36,9 +36,20 @@ grad = zeros(size(theta));
 %           grad = grad + YOUR_CODE_HERE (using the temp variable)
 %
 
+% Cost function calculations
+h = sigmoid(X * theta);
+term_1 = (-y)' * log(h);
+term_2 = (1 - y)' * log(1 - h);
+term_3 = term_1 - term_2;
+term_4 = lambda / (2 * m) .* sum(theta.^2);
+J = (1 / m) .* sum(term_3) + term_4;
 
 
+% Calculating the gradient
 
+temp = theta;
+temp(1) = 0;
+grad = (1 / m) .* (X' * (h - y) + lambda .* temp);
 
 
 
