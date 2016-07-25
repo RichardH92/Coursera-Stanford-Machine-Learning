@@ -37,11 +37,13 @@ grad = zeros(size(theta));
 %
 
 % Cost function calculations
+n = length(theta);
 h = sigmoid(X * theta);
 term_1 = (-y)' * log(h);
 term_2 = (1 - y)' * log(1 - h);
 term_3 = term_1 - term_2;
-term_4 = lambda / (2 * m) .* sum(theta.^2);
+theta_2 = theta(2:n, 1);
+term_4 = lambda / (2 * m) .* sum(theta_2 .^ 2);
 J = (1 / m) .* sum(term_3) + term_4;
 
 
